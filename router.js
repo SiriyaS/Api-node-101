@@ -14,10 +14,12 @@ module.exports = function(app){
         res.status(200).send(result);
     })
 
+    // json body to csv file
     app.post('/assignment2', function (req, res) {
         var data = req.body;
         console.log(data);
-        
+        handle.assignment2(data);
+        res.status(201).send('success to create csv file')
     })
 }
 
