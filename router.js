@@ -16,6 +16,7 @@ module.exports = function(app){
 
     // json body to csv file
     app.post('/assignment2', function (req, res) {
+        // console.log(req.body)
         var data = req.body;
         console.log(data);
         handle.assignment2(data);

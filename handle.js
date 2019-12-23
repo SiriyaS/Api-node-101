@@ -37,7 +37,15 @@ function assignment1(num){
 
 function assignment2(data){
     // console.log(data);
-    const personal = [data];
+    const personal = [
+      {
+        name: data.name,
+        age: data.age,
+        school: data.school,
+        major: data.major,
+        faculty: data.faculty,
+      }
+    ];
     csvWriter
   .writeRecords(personal)
   .then(()=> console.log('The CSV file was written successfully'));
